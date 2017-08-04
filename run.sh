@@ -3,10 +3,6 @@
 DOMAINS=($DOMAIN)
 PROXIES=($PROXY)
 
-echo $CERTBOT_EMAIL
-echo $DOMAIN $DOMAINS
-echo $PROXY $PROXIES
-
 # For some reason the certbot call fails for multiple domains, so we loop the domains instead.
 for ((i=0;i<${#DOMAINS[@]};++i)); do
 
@@ -17,7 +13,7 @@ for ((i=0;i<${#DOMAINS[@]};++i)); do
         sleep 5
     done
 
-    sed -e "s/\$DOMAIN/${DOMAINS[i]}/" -e "s/\$PROXY/${PROXIES[i]}/" /etc/nginx/conf.d/site.tmpl > /etc/nginx/conf.d/${DOMAINS[i]}.conf
+    sed -e "s~\$DOMAIN~${DOMAINS[i]}~g" -e "s~\$PROXY~${PROXIES[i]}~g" /etc/nginx/conf.d/site.tmpl > /etc/nginx/conf.d/${DOMAINS[i]}.conf
 done
 
 while true
