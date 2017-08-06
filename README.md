@@ -22,4 +22,4 @@ The domain or domains you own and which is configured to the IP of the machine y
 ### PROXY
 The host or hosts you wish to proxy, URL. Define one for each DOMAIN (1:1).
 #### Example
-```ENV PROXY=11.22.33.44 https://www.google.com```
+```ENV PROXY=http://11.22.33.44 https://www.google.com```
