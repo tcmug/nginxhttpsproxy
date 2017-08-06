@@ -11,7 +11,7 @@ COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY nginx/site.tmpl /etc/nginx/conf.d/site.tmpl
 
 COPY run.sh /run.sh
-COPY renew.sh /etc/cron.daily/run.sh
+COPY renew.sh /etc/cron.daily/renew.sh
 
 CMD ["/run.sh"]
 
