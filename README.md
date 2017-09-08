@@ -1,7 +1,7 @@
 # nginxhttpsproxy
 
 ## What is it?
-This is a [Docker image](https://hub.docker.com/r/tcmug/nginxhttpsproxy/) based on the [official nginx image](https://hub.docker.com/_/nginx/). This image is automated to fetch a free SSL certificate ([Let's Encrypt](https://letsencrypt.org/) / [Certbot](https://certbot.eff.org/)) for the given domain(s) and to work as a proxy for the given urls. Note that there is NO AUTO RENEWAL configured yet, instead renewing can be done by simply recreating the container.
+This is a [Docker image](https://hub.docker.com/r/tcmug/nginxhttpsproxy/) based on the [official nginx image](https://hub.docker.com/_/nginx/). This image is automated to fetch a free SSL certificate ([Let's Encrypt](https://letsencrypt.org/) / [Certbot](https://certbot.eff.org/)) for the given domain(s) and to work as a proxy for the given urls.
 
 ## Usage
 ### Single domain
