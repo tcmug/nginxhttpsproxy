@@ -1,3 +1,3 @@
 #!/bin/bash
 
-certbot renew
+certbot renew --pre-hook "killall nginx"
