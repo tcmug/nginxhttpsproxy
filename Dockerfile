@@ -1,7 +1,7 @@
 FROM nginx:1.13
 
 RUN apt-get update\
-    && apt-get install certbot -y\
+    && apt-get install certbot procps -y\
     && apt-get clean\
     && rm -rf /var/lib/apt/lists/*
 
