@@ -11,7 +11,7 @@ COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY nginx/site.tmpl /etc/nginx/conf.d/site.tmpl
 
 COPY run.sh /run.sh
-COPY renew.sh /etc/cron.d/certbot
+COPY certbot-renew.sh /etc/cron.d/certbot-renew.sh
 
 CMD ["/run.sh"]
 

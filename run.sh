@@ -24,6 +24,6 @@ done
 while true
 do
     nginx -g "daemon off;"
-    sleep 10
+    sleep 60
 done
 
